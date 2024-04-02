@@ -9,43 +9,66 @@
 
 
 <body>
-  <h2 style="text-align: center; color: rgb(87, 2, 16);">TEC SOUND PCC - Duty Roster FOR JULY 2024</h2>
-  <!--<b>WEEK <span> 1</b></span></p>-->
+  <h2 style="text-align: center; color: rgb(87, 2, 16);">TEC SOUND PCC - DUTY ROSTER FOR JULY 2024</h2>
+  <p id="titleElement"><b>WEEK <span></span></b></p>
   <table id="dutyRoster">
     <thead>
       <tr>
         <th>Date</th>
         <th>Day</th>
         <th>Time</th>
-        <th>Supervision</th>
+        <th>Leaders in Supervision</th>
         <th>Stage Volunteer</th>
         <th>FOH Volunteer</th>
         <th>Broadcast Volunteer</th>
-        <th>cubase</th>
-       <th>Roaming Engineer</th>
-      </tr>
+        <th>Msg Recording</th>
+       </tr>
     </thead>
     <tbody>
       <!-- Data will be dynamically added here--> 
     </tbody>
   </table>
+  
   <button onclick="previousWeek()" style="background-color: red; color: white;">Previous Week</button>
-  <button onclick="nextWeek()" style="background-color: green; color: white;">Next Week</button>
-  <!--<button onclick="previousMonth()" style="background-color: blue; color: white;">Previous Month</button>
-  <button onclick="nextMonth()" style="background-color: orange; color: white;">Next Month</button>-->
+  <button onclick="nextWeek()" style="background-color: green; color: white;">Next Week</button> 
+
+<div style="border: 0.1px solid #cccccc; padding: 0.2px; margin-top: 0px; background-color: #fff; color: #310101">
+<p><marquee behavior="scroll" direction="right">Note: please, note that if you are scheduled for sunday services support, you HAVE to be available between 7am and 10am on saturdays except otherwise announced.</marquee></p></div>
+</div>
+
+
   <style>
     table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    border: 1px solid #6b6969;
-    text-align: left;
-    padding: 8px;
-  }
-  th {
-    background-color: #035d5f;
-  }
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #6b6969;
+      text-align: left;
+      padding: 1px;
+      white-space: nowrap;
+    }
+    th {
+      background-color: #035d5f;
+    }
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 5px;
+    }
+    .note-container {
+      border: 0.1px solid #cccccc;
+      padding: 0.2px;
+      margin-top: 20px;
+      background-color: #fff;
+      color: #310101;
+    }
+    .note-container p {
+      margin: 0;
+    }
+    .note-container marquee {
+      width: 100%;
+    }
   </style>
 
   <script> 
@@ -54,77 +77,76 @@
      // let currentMonth = 4; // April is month 4
     let currentWeek = 0;// Week 1
 
-   const maydutyRosterData = [
-
+   const julydutyRosterData = [
 
    {
-        date: "May 1, 2024",
+        date: "July 3, 2024",
         day: "Wednesday",
         time: "5:30pm - 8:30pm",
-        supervision: "Mr. Paul/Mr. Joshua",
+        leadersInSupervision: "Mr. Paul/Mr. Joshua",
         stageVolunteer: "Joseph",
         fohVolunteer: "Justin",
-        broadcastVolunteer: "Samuel Supervise By Felix",
-        cubase: "-",
-        roamingEngineer: "-",
+        broadcastVolunteer: "Samuel Supervised By Felix",
+        msgRecording: "-",
+    
         weekNumber: 1
       },
 
       
       {
-        date: "May 4, 2024",
+        date: "July 6, 2024",
         day: "Saturday-Traning",
         time: "8:00am - 10:00am",
-        supervision: "Mr. Paul/Mr. Joshua",
+        leadersInSupervision: "Mr. Paul/Mr. Joshua",
         stageVolunteer: "Everyone",
         fohVolunteer: "Everyone",
         broadcastVolunteer: "Everyone",
-        cubase: "-",
-        roamingEngineer: "-",
+        msgRecording: "-",
+        
         weekNumber: 1
       },
       
       
       {
-        date: "May 5, 2024",
+        date: "July 7, 2024",
         day: "Sunday",
         time: "-",
-        supervision: "-",
+        leadersInSupervision: "-",
         stageVolunteer: "-",
         fohVolunteer: "-",
         broadcastVolunteer: "-",
-        cubase: "-",
-        roamingEngineer: "-",
+        msgRecording: "-",
+       
         services: [
           {
             name: "First Service",
             time: "6:30am - 9am",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Philip",
             fohVolunteer: "Samuel",
-            broadcastVolunteer: "Emmanuel Supervise By Felix",
-            cubase: "Abigirl",
-        roamingEngineer: "Pelumi",
+            broadcastVolunteer: "Emmanuel Supervised By Felix",
+            msgRecording: "-",
+       
           },
           {
             name: "Second Service",
             time: "9am - 11am",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Emmanuel",
             fohVolunteer: "Philip",
-            broadcastVolunteer: "Samuel Supervise By Felix",
-            cubase: "Abigirl",
-            roamingEngineer: "Pelumi",
+            broadcastVolunteer: "Samuel Supervised By Felix",
+            msgRecording: "Emmanuel 2",
+            
           },
           {
             name: "Third Service",
             time: "11am - 1pm",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Patrick Aritech",
             fohVolunteer: "Victoria",
-            broadcastVolunteer: "Yosola Supervise By Felix",
-            cubase: "Abigirl",
-            roamingEngineer: "Pelumi",
+            broadcastVolunteer: "Yosola Supervised By Felix",
+            msgRecording: "-",
+          
           }
         ],
         weekNumber: 1
@@ -134,69 +156,69 @@
 
 // Week 2 - April 10-14, 2024
 {
-  date: "May 8, 2024",
+  date: "July 10, 2024",
   day: "Wednesday",
   time: "5:30pm - 8:30pm",
-  supervision: "Mr. Paul/Mr. Joshua",
+  leadersInSupervision: "Mr. Paul/Mr. Joshua",
   stageVolunteer: "Juliana",
   fohVolunteer: "Samuel",
-  broadcastVolunteer: "Patrick Aritech Supervise By Felix", // Corrected spelling
-  cubase: "-",
-  roamingEngineer: "-",
+  broadcastVolunteer: "Patrick Aritech Supervised By Felix", // Corrected spelling
+  msgRecording: "-",
+ 
   weekNumber: 2
 },
 {
-  date: "May 11, 2024",
+  date: "July 13, 2024",
   day: "Saturday-Training", // Corrected spelling
   time: "8:00am - 10:00am",
-  supervision: "Mr. Paul/Mr. Joshua",
+  leadersInSupervision: "Mr. Paul/Mr. Joshua",
   stageVolunteer: "Everyone",
   fohVolunteer: "Everyone",
   broadcastVolunteer: "Everyone",
-  cubase: "-",
-  roamingEngineer: "-",
+  msgRecording: "-",
+ 
   weekNumber: 2
 },
 {
-  date: "May 12, 2024",
+  date: "July 14, 2024",
   day: "Sunday",
   time: "-",
-  supervision: "-",
+  leadersInSupervision: "-",
   stageVolunteer: "-",
   fohVolunteer: "-",
   broadcastVolunteer: "-", // Updated for consistency
-  cubase: "-",
-  roamingEngineer: "-",
+  msgRecording: "-",
+ 
   services: [
     {
       name: "First Service",
       time: "6:30am - 9am",
-      supervision: "Mr. Paul/Mr. Joshua",
+      leadersInSupervision: "Mr. Paul/Mr. Joshua",
       stageVolunteer: "Mr. Tayo",
       fohVolunteer: "Daniel",
-      broadcastVolunteer: "Yosola Supervise By Felix", // Corrected spelling
-      cubase: "Abigirl",
-      roamingEngineer: "Pelumi",
+      broadcastVolunteer: "Yosola Supervised By Felix", // Corrected spelling
+      msgRecording: "-",
+    
     },
     {
       name: "Second Service",
       time: "9am - 11am",
-      supervision: "Mr. Paul/Mr. Joshua",
+      leadersInSupervision: "Mr. Paul/Mr. Joshua",
       stageVolunteer: "Victoria",
       fohVolunteer: "Joseph",
-      broadcastVolunteer: "Patrick 2 Supervise By Felix", // Corrected spelling
-      cubase: "Abigirl",
-      roamingEngineer: "Pelumi",
+      broadcastVolunteer: "Patrick 2 Supervised By Felix", // Corrected spelling
+      msgRecording: "Philip",
+     
     },
     {
       name: "Third Service",
       time: "11am - 1pm",
-      supervision: "Mr. Paul/Mr. Joshua",
+      leadersInSupervision: "Mr. Paul/Mr. Joshua",
       stageVolunteer: "Joseph",
       fohVolunteer: "Patrick 2",
       broadcastVolunteer: "Felix",
-      cubase: "Abigirl",
-      roamingEngineer: "Pelumi",
+      msgRecording: "-",
+    
     }
   ],
   weekNumber: 2
@@ -207,72 +229,72 @@
 
 //week 3
 {
-        date: "May 15, 2024",
+        date: "July 17, 2024",
         day: "Wednesday",
         time: "5:30pm - 8:30pm",
-        supervision: "Mr. Paul/Mr. Joshua",
+        leadersInSupervision: "Mr. Paul/Mr. Joshua",
         stageVolunteer: "Joseph",
         fohVolunteer: "Justin",
         broadcastVolunteer: "Felix",
-        cubase: "-",
-        roamingEngineer: "-",
+        msgRecording: "-",
+       
         weekNumber: 3
       },
       // Add duty roster data for the rest of April, as per provided information
      {
-        date: "May 18, 2024",
+        date: "July 20, 2024",
         day: "Saturday-Traning",
         time: "8:00am - 10:00am",
-        supervision: "Mr. Paul/Mr. Joshua",
+        leadersInSupervision: "Mr. Paul/Mr. Joshua",
         stageVolunteer: "Everyone",
         fohVolunteer: "Everyone",
         broadcastVolunteer: "Everyone",
-        cubase: "-",
-        roamingEngineer: "-",
+        msgRecording: "-",
+      
         weekNumber: 3
       },
       
       
       {
-        date: "May 19, 2024",
+        date: "July 21, 2024",
         day: "Sunday",
         time: "-",
-        supervision: "-",
+        leadersInSupervision: "-",
         stageVolunteer: "-",
         fohVolunteer: "-",
         broadcastVolunteer: "-",
-        cubase: "-",
-         roamingEngineer: "-",
+        msgRecording: "-",
+        
         services: [
           {
             name: "First Service",
             time: "6:30am - 9am",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Patrick 2",
             fohVolunteer: "Mr. Tayo",
             broadcastVolunteer: "Felix",
-            cubase: "Abigirl",
-            roamingEngineer: "Pelumi",
+            msgRecording: "-",
+            
           },
           {
             name: "Second Service",
             time: "9am - 11am",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Daniel",
             fohVolunteer: "Nuvie",
-            broadcastVolunteer: "Juliana supervise By Felix",
-            cubase: "Abigirl",
-            roamingEngineer: "Pelumi",
+            broadcastVolunteer: "Juliana supervised By Felix",
+            msgRecording: "Abigirl",
+           
           },
           {
             name: "Third Service",
             time: "11am - 1pm",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Nuvie",
             fohVolunteer: "Juliana",
             broadcastVolunteer: "Felix",
-            cubase: "Abigirl",
-            roamingEngineer: "Pelumi",
+            msgRecording: "-",
+            
           }
         ],
         weekNumber: 3
@@ -284,72 +306,72 @@
 
 //week 4
 {
-        date: "May 22, 2024",
+        date: "July 24, 2024",
         day: "Wednesday",
         time: "5:30pm - 8:30pm",
-        supervision: "Mr. Paul/Mr. Joshua",
+        leadersInSupervision: "Mr. Paul/Mr. Joshua",
         stageVolunteer: "Philip",
         fohVolunteer: "Justin",
-        broadcastVolunteer: "Joseph Supervise By Felix",
-        cubase: "-",
-        roamingEngineer: "-",
+        broadcastVolunteer: "Joseph Supervised By Felix",
+        msgRecording: "-",
+       
         weekNumber: 4
       },
       // Add duty roster data for the rest of April, as per provided information
      {
-        date: "May 25, 2024",
+        date: "July 27, 2024",
         day: "Saturday-Traning",
         time: "8:00am - 10:00am",
-        supervision: "Mr. Paul/Mr. Joshua",
+        leadersInSupervision: "Mr. Paul/Mr. Joshua",
         stageVolunteer: "Everyone",
         fohVolunteer: "Everyone",
         broadcastVolunteer: "Everyone",
-        cubase: "-",
-        roamingEngineer: "-",
+        msgRecording: "-",
+    
         weekNumber: 4
       },
       
       
       {
-        date: "May 26, 2024",
+        date: "July 28, 2024",
         day: "Sunday",
         time: "-",
-        supervision: "-",
+        leadersInSupervision: "-",
         stageVolunteer: "-",
         fohVolunteer: "-",
         broadcastVolunteer: "-",
-        cubase: "-",
-        roamingEngineer: "-",
+        msgRecording: "-",
+        
         services: [
           {
             name: "First Service",
             time: "6:30am - 9am",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Mr. Tayo",
             fohVolunteer: "Emmanuel",
             broadcastVolunteer: "Felix",
-            cubase: "Abigirl",
-            roamingEngineer: "Pelumi",
+            msgRecording: "-",
+            
           },
           {
             name: "Second Service",
             time: "9am - 11am",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Patrick Aritech",
             fohVolunteer: "Victoria",
-            broadcastVolunteer: "Patrick 2 supervise By Felix",
-            cubase: "Abigirl",
-            roamingEngineer: "Pelumi",
+            broadcastVolunteer: "Patrick 2 supervised By Felix",
+            msgRecording: "Emmanuel 2",
+           
           },
           {
             name: "Third Service",
             time: "11am - 1pm",
-            supervision: "Mr. Paul/Mr. Joshua",
+            leadersInSupervision: "Mr. Paul/Mr. Joshua",
             stageVolunteer: "Nuvie",
             fohVolunteer: "Juliana",
             broadcastVolunteer: "Felix",
-            cubase: "Abigirl",
-            roamingEngineer: "Pelumi",
+            msgRecording: "-",
+            
           }
         ],
         weekNumber: 4
@@ -358,15 +380,15 @@
 
 
         {
-        date: "May 29, 2024",
+        date: "July 31, 2024",
         day: "Wednesday",
         time: "5:30pm - 8:30pm",
-        supervision: "Mr. Paul/Mr. Joshua",
+        leadersInSupervision: "Mr. Paul/Mr. Joshua",
         stageVolunteer: "Philip",
         fohVolunteer: "Justin",
-        broadcastVolunteer: "Joseph Supervise By Felix",
-        cubase: "-",
-        roamingEngineer: "-",
+        broadcastVolunteer: "Joseph Supervised By Felix",
+        msgRecording: "-",
+      
         weekNumber: 4
       },
 
@@ -374,26 +396,22 @@
 
     ]
 
-  
-
-
-
     function populateDutyRoster() {
       const tableBody = document.querySelector('#dutyRoster tbody');
       tableBody.innerHTML = '';
-      maydutyRosterData.forEach(data => {
+      julydutyRosterData.forEach(data => {
         if (data.weekNumber === currentWeek + 1) {
           const row = document.createElement('tr');
           row.innerHTML = `
             <td>${data.date}</td>
             <td>${data.day}</td>
             <td>${data.time}</td>
-            <td>${data.supervision}</td>
+            <td>${data.leadersInSupervision}</td>
             <td>${data.stageVolunteer}</td>
             <td>${data.fohVolunteer}</td>
             <td>${data.broadcastVolunteer}</td>
-            <td>${data.cubase}</td>
-            <td>${data.roamingEngineer}</td>
+            <td>${data.msgRecording}</td>
+        
           `;
           tableBody.appendChild(row);
 
@@ -408,12 +426,12 @@
                   <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${data.date}</td>
                   <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.name}</td>
                   <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.time}</td>
-                  <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.supervision}</td>
+                  <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.leadersInSupervision}</td>
                   <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.stageVolunteer}</td>
                   <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.fohVolunteer}</td>
                   <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.broadcastVolunteer}</td>
-                  <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.cubase}</td>
-                  <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.roamingEngineer}</td>
+                  <td style="background-color: ${data.weekNumber === 1 ? 'lightblue' : 'lightgreen'};">${service.msgRecording}</td>
+                  
                 `;
                 tableBody.appendChild(serviceRow);
               });
@@ -430,12 +448,12 @@
                 <td>${data.date}</td>
                 <td>${service.name}</td>
                 <td>${service.time}</td>
-                <td>${service.supervision}</td>
+                <td>${service.leadersInSupervision}</td>
                 <td>${service.stageVolunteer}</td>
                 <td>${service.fohVolunteer}</td>
                 <td>${service.broadcastVolunteer}</td>
-                <td>${data.cube}</td>
-            <td>${data.roamingEngineer}</td>
+                <td>${data.msgRecording}</td>
+
               `;
               tableBody.appendChild(serviceRow);
               
@@ -449,48 +467,36 @@
 
 
 
+// Function to update the week number in the HTML and populate the duty roster
+function updateWeekAndDutyRoster() {
+  // Update the week number
+  const titleElement = document.getElementById('titleElement');
+  const weekNumberSpan = titleElement.querySelector('span');
+  weekNumberSpan.textContent = currentWeek + 1;
 
+  // Populate the duty roster for the current week
+  populateDutyRoster();
+}
 
+// Function to handle when the "Previous Week" button is clicked
+function previousWeek() {
+  if (currentWeek > 0) { // Check if it's not the first week
+    currentWeek--; // Decrement the week number
+    updateWeekAndDutyRoster(); // Update the week number and populate the duty roster
+  }
+}
 
+// Function to handle when the "Next Week" button is clicked
+function nextWeek() {
+  // Assuming 4 weeks in May, adjust the condition as needed for other months
+  if (currentWeek < 3) { // Assuming 4 weeks in May
+    currentWeek++; // Increment the week number
+    updateWeekAndDutyRoster(); // Update the week number and populate the duty roster
+  }
+}
 
-
-
-
-
-
-
-    function previousWeek() {
-      if (currentWeek > 0) {
-        currentWeek--;
-        populateDutyRoster();
-      }
-    }
-
-    function nextWeek() {
-      if (currentWeek < 51) { // Assuming 52 weeks in a year
-        currentWeek++;
-        populateDutyRoster();
-      }
-    
-    }
-
-    /*function previousMonth() {
-      if (currentMonth > 0) {
-        currentMonth--;
-        currentWeek = 0; // Reset week number when changing month
-        populateDutyRoster();
-      }
-    }
-
-    function nextMonth() {
-      if (currentMonth < 8) { // December is month 11
-        currentMonth++;
-        currentWeek = 0; // Reset week number when changing month
-        populateDutyRoster();
-      }
-    }*/
-
-</script>
-   
+// Call the function initially to set the week number and populate the duty roster
+updateWeekAndDutyRoster();
+</script>  
 </body>
 </html>
