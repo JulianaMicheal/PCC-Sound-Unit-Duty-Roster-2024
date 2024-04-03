@@ -42,70 +42,81 @@
 <!--<button onclick="previousMonth()" style="background-color: blue; color: white;">Previous Month</button>
   <button onclick="nextMonth()" style="background-color: orange; color: white;">Next Month</button>-->
   
-
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    width: 100%;
-    position: relative;
-  }
-  #pageTitle {
-    text-align: center;
-    color: rgb(87, 2, 16);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 999;
-  }
-  #content {
-    margin-top: 60px;
-    overflow-x: auto;
-    padding-bottom: 40px; /* Adjust bottom padding */
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    border: 1px solid #6b6969;
-    text-align: left;
-    padding: 8px;
-    white-space: nowrap;
-  }
-  th {
-    background-color: #035d5f;
-  }
-  .note-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 999;
-    padding: 10px;
-    border-top: 1px solid #ccc;
-    display: none; /* Initially hidden */
-  }
-  .note-container p {
-    margin: 0;
-  }
-  .note-container marquee {
-    width: 100%;
-  }
-
-  /* Optional: Adjust table layout for smaller screens */
-  @media screen and (max-width: 600px) {
-    th, td {
-      padding: 6px;
-      font-size: 12px;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
     }
-  }
-</style>
+  
+    .container {
+      width: 100%;
+      position: relative;
+      padding-top: 30px; /* Adjust top padding */
+    }
+  
+    #pageTitle {
+      text-align: center;
+      color: rgb(87, 2, 16);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      z-index: 9999; /* Ensure title appears above other elements */
+    }
+  
+    #content {
+      padding-bottom: 50px; /* Adjust bottom padding */
+      overflow-x: auto; /* Allow horizontal scroll if needed */
+    }
+  
+    table {
+      border-collapse: collapse;
+      width: 100%; /* Adjust to fit container width */
+      table-layout: fixed; /* Fix the table layout */
+    }
+  
+    th, td {
+      border: 1px solid #6b6969;
+      text-align: left;
+      padding: 8px;
+      word-break: break-all; /* Break words to fit smaller screens */
+      min-width: 100px; /* Set a minimum width for each column */
+    }
+  
+    th {
+      background-color: #035d5f;
+      color: #fff;
+    }
+  
+    .note-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      z-index: 999; /* Ensure note container appears above other content */
+      padding: 10px;
+      border-top: 1px solid #ccc;
+    }
+  
+    .note-container p {
+      margin: 0;
+    }
+  
+    .note-container marquee {
+      width: 100%;
+    }
+  
+    /* Optional: Adjust table layout for smaller screens */
+    @media screen and (max-width: 600px) {
+      th, td {
+        padding: 6px;
+        font-size: 12px;
+        min-width: auto; /* Reset minimum width for smaller screens */
+      }
+    }
+  </style>
   
  
 
