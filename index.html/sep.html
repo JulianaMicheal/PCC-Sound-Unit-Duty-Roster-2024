@@ -41,52 +41,71 @@
 </div>
 <!--<button onclick="previousMonth()" style="background-color: blue; color: white;">Previous Month</button>
   <button onclick="nextMonth()" style="background-color: orange; color: white;">Next Month</button>-->
- 
-  <style>
-    table {
-     border-collapse: collapse;
-     width: 100%;
-     overflow-x: auto;
-     
-   }
-   th, td {
-     border: 1px solid #6b6969;
-     text-align: left;
-     padding: 8px; /*8px*/
-     /*word-wrap: break-word;*/
-     white-space: nowrap; /* Prevent content from wrapping */
-   }
-   th {
-     background-color: #035d5f;
-   }
-   .container {
-     max-width: 100%;
-     margin: 0 auto;
-     padding: 0 20px; /*0 20px*/
-   }
-   .note-container {
-     border: 0.1px solid #cccccc;
-     padding: 0.2px;
-     margin-top: 20px;
-     background-color: #fff;
-     color: #310101;
-   }
-   .note-container p {
-     margin: 0;
-   }
-   .note-container marquee {
-     width: 100%;
-   } 
- 
-   /* Optional: Adjust table layout for smaller screens */
- @media screen and (max-width: 600px) {
-   th, td {
-     padding: 6px;
-     font-size: 12px;
-   }
- }
- 
- </style>
+  
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    position: relative;
+  }
+  #pageTitle {
+    text-align: center;
+    color: rgb(87, 2, 16);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 999;
+  }
+  #content {
+    margin-top: 60px;
+    overflow-x: auto;
+    padding-bottom: 40px; /* Adjust bottom padding */
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #6b6969;
+    text-align: left;
+    padding: 8px;
+    white-space: nowrap;
+  }
+  th {
+    background-color: #035d5f;
+  }
+  .note-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 999;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: none; /* Initially hidden */
+  }
+  .note-container p {
+    margin: 0;
+  }
+  .note-container marquee {
+    width: 100%;
+  }
+
+  /* Optional: Adjust table layout for smaller screens */
+  @media screen and (max-width: 600px) {
+    th, td {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+</style>
   
  
 
