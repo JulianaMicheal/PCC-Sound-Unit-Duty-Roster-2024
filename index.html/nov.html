@@ -39,39 +39,52 @@
     </div>
 
 
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    th, td {
-      border: 1px solid #6b6969;
-      text-align: left;
-      padding: 1px;
-      white-space: nowrap;
-    }
-    th {
-      background-color: #035d5f;
-    }
-    .container {
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 5px;
-    }
-    .note-container {
-      border: 0.1px solid #cccccc;
-      padding: 0.2px;
-      margin-top: 20px;
-      background-color: #fff;
-      color: #310101;
-    }
-    .note-container p {
-      margin: 0;
-    }
-    .note-container marquee {
-      width: 100%;
-    }
-  </style>
+    <style>
+      table {
+       border-collapse: collapse;
+       width: 100%;
+       overflow-x: auto;
+       
+     }
+     th, td {
+       border: 1px solid #6b6969;
+       text-align: left;
+       padding: 8px; /*8px*/
+       /*word-wrap: break-word;*/
+       white-space: nowrap; /* Prevent content from wrapping */
+     }
+     th {
+       background-color: #035d5f;
+     }
+     .container {
+       max-width: 100%;
+       margin: 0 auto;
+       padding: 0 20px; /*0 20px*/
+     }
+     .note-container {
+       border: 0.1px solid #cccccc;
+       padding: 0.2px;
+       margin-top: 20px;
+       background-color: #fff;
+       color: #310101;
+     }
+     .note-container p {
+       margin: 0;
+     }
+     .note-container marquee {
+       width: 100%;
+     } 
+   
+     /* Optional: Adjust table layout for smaller screens */
+   @media screen and (max-width: 600px) {
+     th, td {
+       padding: 6px;
+       font-size: 12px;
+     }
+   }
+   
+   </style>
+    
 
   <script> 
 
