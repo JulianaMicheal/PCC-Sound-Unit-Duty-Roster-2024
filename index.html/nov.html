@@ -9,7 +9,8 @@
 
 
 <body>
-  <h2 style="text-align: center; color: rgb(87, 2, 16);">TEC SOUND PCC - DUTY ROSTER FOR NOVEMBER 2024</h2>
+  <div class="container">
+  <h2>TEC SOUND PCC - DUTY ROSTER FOR NOVEMBER 2024</h2>
   <p id="titleElement"><b>WEEK <span></span></b></p>
   <div style="overflow-x:auto;">
   <table id="dutyRoster">
@@ -30,6 +31,7 @@
       <!-- Data will be dynamically added here--> 
     </tbody>
   </table>
+  </div>
   <button onclick="previousWeek()" style="background-color: red; color: white;">Previous Week</button>
   <button onclick="nextWeek()" style="background-color: green; color: white;">Next Week</button>
   <!--<button onclick="previousMonth()" style="background-color: blue; color: white;">Previous Month</button>
@@ -42,48 +44,90 @@
  
 
     <style>
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        /* Remove overflow-x */
-      }
-      th, td {
-        border: 1px solid #6b6969;
-        text-align: left;
-        padding: 8px; /*8px*/
-        /*word-wrap: break-word;*/
-        white-space: nowrap; /* Prevent content from wrapping */
-      }
-      th {
-        background-color: #035d5f;
-      }
-      .container {
+      /*.container {
         max-width: 100%;
-        margin: 0 auto;
-        padding: 0 20px; /*0 20px*/
+        margin-right: 36px;
+        margin-left: 36px;
+        padding:  0 20px;
+        overflow-x: auto;*/
+      
+      
+        .container {
+        margin: 20px;
+        padding: 20px;
+        overflow-x: auto;
       }
-      .note-container {
-        border: 0.1px solid #cccccc;
-        padding: 0.2px;
-        margin-top: 20px;
-        background-color: #fff;
-        color: #310101;
+      
+      h2 {
+        text-align: center;
+        color: rgb(87, 2, 16);
+        margin-bottom: 20px; /* Add margin to prevent overlapping */
       }
-      .note-container p {
-        margin: 0;
+      #titleElement {
+        text-align: center;
       }
-      .note-container marquee {
+      
+      
+      /*#dutyRoster {
         width: 100%;
-      } 
-    
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: max-content;*/*
+      
+      
+        #dutyRoster {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      #dutyRoster th,
+      #dutyRoster td {
+        border: 1px solid #6b6969;
+        padding: 8px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        }
+      
+        th {
+          background-color: #035d5f;
+        }
+      
       /* Optional: Adjust table layout for smaller screens */
       @media screen and (max-width: 600px) {
-        th, td {
+        #dutyRoster th,
+        #dutyRoster td {
           padding: 6px;
           font-size: 12px;
         }
       }
-    </style>
+      
+      /*button {
+        display: block; /* Ensure buttons stack vertically on small screens */
+       /* margin: 10px auto;  /*Center buttons */
+      /*}*/
+      
+      .note-container p{
+        border: 0.1px solid #cccccc;
+        padding: 10px;
+        background-color: #fff;
+        color: #310101;
+        margin-top: 0px; /* Add margin to separate from content */
+      }
+      
+      /* Prevent note container from scrolling up */
+      .note-container {
+        position: sticky;
+        bottom: 0;
+      }
+      
+      
+      
+      .note-container marquee {
+              width: 100%;
+            } 
+      </style>
     
 
   <script> 

@@ -7,7 +7,6 @@
   <!--<link rel="stylesheet" href="styles.css">-->
 </head>
 
-
 <body>
   <div class="container">
   <h2>TEC SOUND PCC - DUTY ROSTER FOR JULY 2024</h2>
@@ -31,7 +30,7 @@
     </tbody>
   </table>
   </div>
-  
+
   <button onclick="previousWeek()" style="background-color: red; color: white;">Previous Week</button>
   <button onclick="nextWeek()" style="background-color: green; color: white;">Next Week</button> 
 
@@ -42,18 +41,19 @@
 </div>
 </div>
 
- 
-
-
-
-
 <style>
-  .container {
+  /*.container {
     max-width: 100%;
-    margin: 0 auto;
+    margin-right: 36px;
+    margin-left: 36px;
     padding:  0 20px;
+    overflow-x: auto;*/
+  
+  
+    .container {
+    margin: 20px;
+    padding: 20px;
     overflow-x: auto;
-    
   }
   
   h2 {
@@ -66,11 +66,16 @@
   }
   
   
-  #dutyRoster {
+  /*#dutyRoster {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-    width: max-content;
+    width: max-content;*/*
+  
+  
+    #dutyRoster {
+    width: 100%;
+    border-collapse: collapse;
   }
   
   #dutyRoster th,
@@ -121,12 +126,6 @@
           width: 100%;
         } 
   </style>
-  
-
-
-
-
-
   <script> 
 
       // Add duty roster data for the rest of May, as per provided information

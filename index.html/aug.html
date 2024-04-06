@@ -6,11 +6,9 @@
   <title>TEC SOUND PCC - DUTY ROSTER 2024</title>
 <!--<link rel="stylesheet" href="styles.css">-->
 </head>
-
-
 <body>
 <div class="container">
-  <h2 style="text-align: center; color: rgb(87, 2, 16);">TEC SOUND PCC - DUTY ROSTER FOR AUGUST 2024</h2>
+  <h2>TEC SOUND PCC - DUTY ROSTER FOR AUGUST 2024</h2>
   <p id="titleElement"><b>WEEK <span></span></b></p>
   <div style="overflow-x:auto;">
   <table id="dutyRoster">
@@ -32,12 +30,10 @@
     </tbody>
   </table>
 </div>
-
   <button onclick="previousWeek()" style="background-color: red; color: white;">Previous Week</button>
   <button onclick="nextWeek()" style="background-color: green; color: white;">Next Week</button> 
 
-
-<div class="note-container">
+  <div class="note-container">
 <p><marquee behavior="scroll" direction="left">Note: please, note that if you are scheduled for sunday services support, you HAVE to be available between 7am and 10am on saturdays except otherwise announced.
 </marquee>
 </p>
@@ -48,11 +44,19 @@
   <button onclick="nextMonth()" style="background-color: orange; color: white;">Next Month</button>-->
  
   <style>
-    .container {
+/*.container {
       max-width: 100%;
-      margin: 0 auto;
-      padding: 0 20px;
-      overflow-x: auto;
+      margin-right: 36px;
+      margin-left: 36px;
+      padding:  0 20px;
+      overflow-x: auto;*/
+
+  .container {
+  margin: 20px;
+  padding: 20px;
+  overflow-x: auto;
+
+  /*border: 1px solid #ccc;*/
       
     }
     
@@ -66,11 +70,15 @@
     }
     
     
-    #dutyRoster {
+    /*#dutyRoster {
       width: 100%;
       border-collapse: collapse;
       table-layout: fixed;
-      width: max-content;
+      width: max-content;*/
+
+  #dutyRoster {
+  width: 100%;
+  border-collapse: collapse;
     }
     
     #dutyRoster th,
@@ -81,7 +89,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-}
+      }
     
       th {
         background-color: #035d5f;
@@ -93,10 +101,6 @@
       #dutyRoster td {
         padding: 6px;
         font-size: 12px;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;  
       }
     }
     
@@ -118,22 +122,14 @@
       position: sticky;
       bottom: 0;
     }
-
+    
+    
+    
     .note-container marquee {
-      width: 100%;
-    } 
-  
+            width: 100%;
+          } 
     </style>
     
-    
-    
-
-
-
-
-  
- 
-
  <script>
 //let currentMonth = 3; // April is month 4
     let currentWeek = 0;// Week 1
