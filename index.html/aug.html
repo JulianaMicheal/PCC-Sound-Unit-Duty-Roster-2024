@@ -44,20 +44,12 @@
   <button onclick="nextMonth()" style="background-color: orange; color: white;">Next Month</button>-->
  
   <style>
-/*.container {
+    .container {
       max-width: 100%;
       margin-right: 36px;
       margin-left: 36px;
       padding:  0 20px;
-      overflow-x: auto;*/
-
-  .container {
-  margin: 20px;
-  padding: 20px;
-  overflow-x: auto;
-
-  /*border: 1px solid #ccc;*/
-      
+      overflow-x: auto;
     }
     
     h2 {
@@ -70,15 +62,11 @@
     }
     
     
-    /*#dutyRoster {
+    #dutyRoster {
       width: 100%;
       border-collapse: collapse;
       table-layout: fixed;
-      width: max-content;*/
-
-  #dutyRoster {
-  width: 100%;
-  border-collapse: collapse;
+      width: max-content;
     }
     
     #dutyRoster th,
@@ -101,6 +89,9 @@
       #dutyRoster td {
         padding: 6px;
         font-size: 12px;
+        overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;  
       }
     }
     
@@ -129,6 +120,7 @@
             width: 100%;
           } 
     </style>
+    
     
  <script>
 //let currentMonth = 3; // April is month 4

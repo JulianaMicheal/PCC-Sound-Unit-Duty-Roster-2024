@@ -39,19 +39,14 @@
   </div>
 <!--<button onclick="previousMonth()" style="background-color: blue; color: white;">Previous Month</button>
   <button onclick="nextMonth()" style="background-color: orange; color: white;">Next Month</button>-->
- <style>
-    /*.container {
+  
+  <style>
+    .container {
       max-width: 100%;
       margin-right: 36px;
       margin-left: 36px;
-      padding: 0 20px;
-      overflow-x: auto;*/
-      
- .container {
-  margin: 20px;
-  padding: 20px;
-  max-width: 100%;
-
+      padding:  0 20px;
+      overflow-x: auto;
     }
     
     h2 {
@@ -67,8 +62,8 @@
     #dutyRoster {
       width: 100%;
       border-collapse: collapse;
-      /*table-layout: fixed;
-      width: max-content;*/
+      table-layout: fixed;
+      width: max-content;
     }
     
     #dutyRoster th,
@@ -79,7 +74,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-}
+      }
     
       th {
         background-color: #035d5f;
@@ -91,10 +86,9 @@
       #dutyRoster td {
         padding: 6px;
         font-size: 12px;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;  
+        overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;  
       }
     }
     
@@ -116,12 +110,14 @@
       position: sticky;
       bottom: 0;
     }
-
+    
+    
+    
     .note-container marquee {
-      width: 100%;
-    } 
-  
+            width: 100%;
+          } 
     </style>
+ 
 
  <script>
 //let currentMonth = 3; // April is month 4

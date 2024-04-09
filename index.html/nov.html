@@ -37,24 +37,18 @@
   <!--<button onclick="previousMonth()" style="background-color: blue; color: white;">Previous Month</button>
   <button onclick="nextMonth()" style="background-color: orange; color: white;">Next Month</button>-->
 
-  <div style="border: 0.1px solid #cccccc; padding: 0.2px; margin-top: 0px; background-color: #fff; color: #310101">
-    <p><marquee behavior="scroll" direction="right">Note: please, note that if you are scheduled for sunday services support, you HAVE to be available between 7am and 10am on saturdays except otherwise announced.</marquee></p></div>
+  <div class="note-container">
+    <p><marquee behavior="scroll" direction="left">Note: please, note that if you are scheduled for sunday services support, you HAVE to be available between 7am and 10am on saturdays except otherwise announced.</marquee></p></div>
     </div>
     <br><br>
  
 
     <style>
-      /*.container {
+      .container {
         max-width: 100%;
         margin-right: 36px;
         margin-left: 36px;
         padding:  0 20px;
-        overflow-x: auto;*/
-      
-      
-        .container {
-        margin: 20px;
-        padding: 20px;
         overflow-x: auto;
       }
       
@@ -68,16 +62,11 @@
       }
       
       
-      /*#dutyRoster {
+      #dutyRoster {
         width: 100%;
         border-collapse: collapse;
         table-layout: fixed;
-        width: max-content;*/*
-      
-      
-        #dutyRoster {
-        width: 100%;
-        border-collapse: collapse;
+        width: max-content;
       }
       
       #dutyRoster th,
@@ -100,6 +89,9 @@
         #dutyRoster td {
           padding: 6px;
           font-size: 12px;
+          overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;  
         }
       }
       
@@ -128,8 +120,6 @@
               width: 100%;
             } 
       </style>
-    
-
   <script> 
 
       // Add duty roster data for the rest of May, as per provided information

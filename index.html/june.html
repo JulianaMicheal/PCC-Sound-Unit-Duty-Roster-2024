@@ -45,17 +45,11 @@
     </div>
 
     <style>
-      /*.container {
+      .container {
         max-width: 100%;
         margin-right: 36px;
         margin-left: 36px;
         padding:  0 20px;
-        overflow-x: auto;*/
-      
-      
-        .container {
-        margin: 20px;
-        padding: 20px;
         overflow-x: auto;
       }
       
@@ -69,16 +63,11 @@
       }
       
       
-      /*#dutyRoster {
+      #dutyRoster {
         width: 100%;
         border-collapse: collapse;
         table-layout: fixed;
-        width: max-content;*/*
-      
-      
-        #dutyRoster {
-        width: 100%;
-        border-collapse: collapse;
+        width: max-content;
       }
       
       #dutyRoster th,
@@ -101,6 +90,9 @@
         #dutyRoster td {
           padding: 6px;
           font-size: 12px;
+          overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;  
         }
       }
       
@@ -122,10 +114,14 @@
         position: sticky;
         bottom: 0;
       }
+      
+      
+      
       .note-container marquee {
               width: 100%;
             } 
       </style>
+      
   <script> 
 
       // Add duty roster data for the rest of May, as per provided information
