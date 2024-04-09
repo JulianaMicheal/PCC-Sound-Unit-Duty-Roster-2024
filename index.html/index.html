@@ -72,6 +72,25 @@
     #titleElement {
       text-align: center;
     }
+
+
+
+    .scroll-container {
+    overflow-y: auto;
+    white-space: nowrap;
+    margin-bottom: 20px; /* Add space below the scroll bar */
+    max-height: 300px; /* Adjust the max-height as needed */
+  }
+  .inner-content {
+    display: inline-block;
+  }
+
+
+
+
+
+
+
     
     
     #dutyRoster {
@@ -131,6 +150,20 @@
     .note-container marquee {
             width: 100%;
           } 
+
+
+
+
+    .scroll-buttons {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+
+
+
+
     </style>
 
 
@@ -530,6 +563,18 @@ function nextMonth() {
         populateDutyRoster();
       }
     }*/
+
+    function scrollLeft() {
+    var container = document.querySelector('.scroll-container');
+    container.scrollLeft -= 20; // Adjust the scroll speed as needed
+  }
+
+  function scrollRight() {
+    var container = document.querySelector('.scroll-container');
+    container.scrollLeft += 20; // Adjust the scroll speed as needed
+  }
+
+
 </script>   
 </body>
 </html>
